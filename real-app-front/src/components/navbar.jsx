@@ -11,7 +11,8 @@ const Navbar = () => {
     >
       <div className="container">
         <Link className="navbar-brand" to="/">
-        <i class="bi bi-briefcase-fill"></i> Biz<span className="mx-1">2</span>Biz
+          <i className="bi bi-briefcase-fill"></i> Biz
+          <span className="mx-1">2</span>Biz
         </Link>
         <button
           className="navbar-toggler"

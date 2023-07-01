@@ -2,17 +2,17 @@ import CardsExample from "./cardsExample";
 import PageHeader from "./common/pageHeader";
 import useMyCards from "../hooks/useMyCards";
 import Card from "./card";
-// import userService from "../services/userService";
 
 const Home = () => {
   const cards = useMyCards();
-  //  const { user } = userService.getUser();
+
   return (
     <>
       <PageHeader
         title={
           <>
-            <i class="bi bi-briefcase-fill"></i> Biz<span className="mx-1">2</span>Biz
+            <i className="bi bi-briefcase-fill"></i> Biz
+            <span className="mx-1">2</span>Biz
           </>
         }
         description="

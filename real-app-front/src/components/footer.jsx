@@ -27,7 +27,7 @@ const Footer = () => {
         </ul>
       </div>
       <span>
-      <i class="bi bi-briefcase-fill"></i> Biz<span className="mx-1">2</span>Biz
+      <i className="bi bi-briefcase-fill"></i> Biz<span className="mx-1">2</span>Biz
       </span>
       <span className="mx-2">&copy;</span>
       <span>{new Date().getFullYear()}</span>

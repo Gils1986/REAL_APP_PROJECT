@@ -8,11 +8,13 @@ export const useMyCards = () => {
 
   useEffect(() => {
     const getCards = async () => {
-      try {
-        const { data } = await cardService.getAllCards();
-        setCards(data);
-      } catch ({ response }) {
-        return cards;
+      if (user) {
+        try {
+          const { data } = await cardService.getAllCards();
+          setCards(data);
+        } catch ({ response }) {
+          return cards;
+        }
       }
     };
     getCards();
