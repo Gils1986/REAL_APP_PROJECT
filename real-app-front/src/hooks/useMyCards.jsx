@@ -8,16 +8,16 @@ export const useMyCards = () => {
 
   useEffect(() => {
     const getCards = async () => {
-      if (user) {
-        try {
-          const { data } = await cardService.getAllCards();
-          setCards(data);
-        } catch ({ response }) {
-          return cards;
-        }
+      //if (user) {
+      try {
+        const { data } = await cardService.getAllCards();
+        setCards(data);
+      } catch ({ response }) {
+        return cards;
       }
     };
-    getCards();
+    //};
+    // getCards();
     if (user?.biz) {
       getCards();
     }

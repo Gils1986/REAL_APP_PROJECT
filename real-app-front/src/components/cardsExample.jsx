@@ -19,7 +19,7 @@ const CardsExample = () => {
             alt="Bakery"
           />
           <div className="card-body">
-            <h5 className="card-title">Boulangerie</h5>
+            <h5 className="card-title fw-bold">Boulangerie</h5>
           </div>
           <ul className="list-group list-group-flush">
             <li className="list-group-item">
@@ -43,10 +43,10 @@ const CardsExample = () => {
           </ul>
           <div className="card-body">
             <Link to="#" className="card-link">
-              Card Edit
+              Edit
             </Link>
             <Link to="#" className="card-link">
-              Card Delete
+              Delete
             </Link>
             <Link to="#" className="card-link">
               Show
@@ -61,7 +61,7 @@ const CardsExample = () => {
             alt="Pet supermarket"
           />
           <div className="card-body">
-            <h5 className="card-title">Pet supermarket</h5>
+            <h5 className="card-title fw-bold">Pet supermarket</h5>
           </div>
           <ul className="list-group list-group-flush">
             <li className="list-group-item">
@@ -84,10 +84,10 @@ const CardsExample = () => {
           </ul>
           <div className="card-body">
             <Link to="#" className="card-link">
-              Card Edit
+              Edit
             </Link>
             <Link to="#" className="card-link">
-              Card Delete
+              Delete
             </Link>
             <Link to="#" className="card-link">
               Show
@@ -102,7 +102,7 @@ const CardsExample = () => {
             alt="Go-Active"
           />
           <div className="card-body">
-            <h5 className="card-title">Go-Active</h5>
+            <h5 className="card-title fw-bold">Go-Active</h5>
           </div>
           <ul className="list-group list-group-flush">
             <li className="list-group-item">
@@ -126,10 +126,10 @@ const CardsExample = () => {
           </ul>
           <div className="card-body">
             <Link to="#" className="card-link">
-              Card Edit
+              Edit
             </Link>
             <Link to="#" className="card-link">
-              Card Delete
+              Delete
             </Link>
             <Link to="#" className="card-link">
               Show
@@ -144,7 +144,7 @@ const CardsExample = () => {
             alt="A place of meat"
           />
           <div className="card-body">
-            <h5 className="card-title">A place of meat</h5>
+            <h5 className="card-title fw-bold">A place of meat</h5>
           </div>
           <ul className="list-group list-group-flush">
             <li className="list-group-item">
@@ -167,10 +167,10 @@ const CardsExample = () => {
           </ul>
           <div className="card-body">
             <Link to="#" className="card-link">
-              Card Edit
+              Edit
             </Link>
             <Link to="#" className="card-link">
-              Card Delete
+              Delete
             </Link>
             <Link to="#" className="card-link">
               Show

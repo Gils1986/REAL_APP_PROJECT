@@ -4,7 +4,7 @@ const Card = ({
   card: { _id, bizName, bizDescription, bizPhone, bizAddress, bizImage },
 }) => {
   return (
-    <div className="card m-3" style={{ width: "18rem" }}>
+    <div className="card m-3 bg-light bg-gradient" style={{ width: "18rem" }}>
       <img
         style={{ width: "262px", height: "262px" }}
         src={bizImage}
@@ -13,7 +13,7 @@ const Card = ({
       />
       <div className="card-body">
         <h5 className="card-title">
-          <Link className="link-dark">{bizName}</Link>
+          <Link className="link-dark fw-bold">{bizName}</Link>
         </h5>
       </div>
       <ul className="list-group list-group-flush">
@@ -42,10 +42,10 @@ const Card = ({
       </ul>
       <div className="card-body">
         <Link to={`/my-cards/edit/${_id}`} className="card-link">
-          Card Edit
+          Edit
         </Link>
         <Link to={`/my-cards/delete/${_id}`} className="card-link">
-          Card Delete
+          Delete
         </Link>
         <Link to={`/my-cards/show/${_id}`} className="card-link">
           Show

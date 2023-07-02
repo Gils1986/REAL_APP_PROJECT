@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Footer = () => {
   const { user } = useAuth();
   return (
-    <footer className="border-top pt-3 py-2 text-center bg-dark-subtle">
+    <footer className="border-top pt-3 py-2 text-center bg-dark-subtle text-dark">
       <div className="container">
         <ul className="navbar-nav me-auto mb-2 mb-sm-0 d-flex flex-row justify-content-center gap-3">
           <li className="nav-item">

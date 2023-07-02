@@ -18,7 +18,13 @@ import CardsShow from "./components/cardsShow";
 
 function App() {
   return (
-    <div className="app d-flex flex-column min-vh-100">
+    <div
+      style={{
+        fontFamily: "Courier New",
+        // backgroundImage: `url("https://cdn.pixabay.com/photo/2018/08/17/07/27/deli-3612243_640.jpg")`,
+      }}
+      className="app d-flex flex-column min-vh-100"
+    >
       <ToastContainer />
       <header>
         <Navbar />

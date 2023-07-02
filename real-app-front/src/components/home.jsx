@@ -2,9 +2,11 @@ import CardsExample from "./cardsExample";
 import PageHeader from "./common/pageHeader";
 import useMyCards from "../hooks/useMyCards";
 import Card from "./card";
+import { useAuth } from "../context/auth.context";
 
 const Home = () => {
   const cards = useMyCards();
+  const {user}=useAuth();
 
   return (
     <>
@@ -20,7 +22,7 @@ const Home = () => {
       />
 
       <div className="row d-flex flex wrap justify-content-around mt-3">
-        {!cards.length ? (
+        {!user?.biz && cards.length === 0 ? (
           <CardsExample />
         ) : (
           cards.toReversed().map((card, index) => {
