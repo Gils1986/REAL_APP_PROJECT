@@ -6,7 +6,7 @@ import { useAuth } from "../context/auth.context";
 
 const Home = () => {
   const cards = useMyCards();
-  const {user}=useAuth();
+  const { user } = useAuth();
 
   return (
     <>
@@ -22,7 +22,7 @@ const Home = () => {
       />
 
       <div className="row d-flex flex wrap justify-content-around mt-3">
-        {!user?.biz && cards.length === 0 ? (
+        {!user || (user.biz && cards.length === 0) ? (
           <CardsExample />
         ) : (
           cards.toReversed().map((card, index) => {
@@ -32,6 +32,9 @@ const Home = () => {
             return null;
           })
         )}
+      </div>
+      <div className="row d-flex flex wrap justify-content-around mt-3">
+        <CardsExample />
       </div>
     </>
   );

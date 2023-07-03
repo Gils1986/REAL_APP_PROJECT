@@ -1,4 +1,8 @@
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+const click = () => {
+  toast("These are sample cards only");
+};
 
 const CardsExample = () => {
   return (
@@ -10,7 +14,7 @@ const CardsExample = () => {
         created, it will display the last three cards that you created on the
         home page.
       </p>
-      <div className="row">
+      <div onClick={click} className="row">
         <div className="card m-2" style={{ width: "300px" }}>
           <img
             style={{ width: "262px", height: "262px" }}

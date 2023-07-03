@@ -6,18 +6,20 @@ import { formikValidateUsingJoi } from "../utils/formikValidateUsingJoi";
 import { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/auth.context";
+import CheckBox from "./checkbox";
 
 const SignUp = ({ redirect = "/sign-in" }) => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const { user, createUser } = useAuth();
+  const { user, createUser, login } = useAuth();
   const form = useFormik({
     validateOnMount: true,
     initialValues: {
       name: "",
       email: "",
       password: "",
+      biz: false,
     },
     validate: formikValidateUsingJoi({
       name: Joi.string().min(2).max(255).required().label("Name"),
@@ -40,10 +42,16 @@ const SignUp = ({ redirect = "/sign-in" }) => {
         letter, 4 numbers, 1 special character (!@%$#^&*) and a minimum of 8
         characters`,
         }),
+      biz: Joi.boolean(),
     }),
     async onSubmit(values) {
       try {
-        await createUser({ ...values, biz: false });
+        await createUser(values);
+        await login({
+          email: values.email,
+          password: values.password,
+        });
+        console.log(values);
         navigate(redirect);
       } catch ({ response }) {
         if (response && response.status === 400) {
@@ -85,6 +93,11 @@ const SignUp = ({ redirect = "/sign-in" }) => {
           label="Password"
           required
           error={form.touched.password && form.errors.password}
+        />
+        <CheckBox
+          {...form.getFieldProps("biz")}
+          label="Sign up as Business user?"
+          error={form.touched.biz && form.errors.password}
         />
 
         <div className="my-2">

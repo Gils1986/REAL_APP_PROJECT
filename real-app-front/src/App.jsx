@@ -6,7 +6,6 @@ import Navbar from "./components/navbar";
 import SignUp from "./components/signup";
 import SignIn from "./components/sigin";
 import SignOut from "./components/signout";
-import SignUpBiz from "./components/signupBiz";
 import MyCards from "./components/myCards";
 import ProtectedRoute from "./components/common/protectedRoute";
 import "react-toastify/dist/ReactToastify.css";
@@ -21,7 +20,6 @@ function App() {
     <div
       style={{
         fontFamily: "Courier New",
-        // backgroundImage: `url("https://cdn.pixabay.com/photo/2018/08/17/07/27/deli-3612243_640.jpg")`,
       }}
       className="app d-flex flex-column min-vh-100"
     >
@@ -33,11 +31,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route path="sign-up" element={<SignUp redirect="/sign-in" />} />
-          <Route
-            path="sign-up-biz"
-            element={<SignUpBiz redirect="/my-cards" />}
-          />
+          <Route path="sign-up" element={<SignUp redirect="/" />} />
           <Route path="sign-in" element={<SignIn redirect="/" />} />
           <Route path="sign-out" element={<SignOut redirect="/" />} />
           <Route

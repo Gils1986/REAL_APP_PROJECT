@@ -8,7 +8,6 @@ export const useMyCards = () => {
 
   useEffect(() => {
     const getCards = async () => {
-      //if (user) {
       try {
         const { data } = await cardService.getAllCards();
         setCards(data);
@@ -16,8 +15,7 @@ export const useMyCards = () => {
         return cards;
       }
     };
-    //};
-    // getCards();
+
     if (user?.biz) {
       getCards();
     }
