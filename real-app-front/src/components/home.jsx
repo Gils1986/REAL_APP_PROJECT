@@ -33,9 +33,6 @@ const Home = () => {
           })
         )}
       </div>
-      <div className="row d-flex flex wrap justify-content-around mt-3">
-        <CardsExample />
-      </div>
     </>
   );
 };

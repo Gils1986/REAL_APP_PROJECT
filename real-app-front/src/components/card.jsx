@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ModalComponent from "./common/modal";
 
 const Card = ({
   card: { _id, bizName, bizDescription, bizPhone, bizAddress, bizImage },
@@ -48,7 +49,7 @@ const Card = ({
           Delete
         </Link>
         <Link to={`/my-cards/show/${_id}`} className="card-link">
-          Show
+          <ModalComponent />
         </Link>
       </div>
     </div>
