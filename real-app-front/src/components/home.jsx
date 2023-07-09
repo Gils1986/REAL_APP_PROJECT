@@ -22,7 +22,7 @@ const Home = () => {
       />
 
       <div className="row d-flex flex wrap justify-content-around mt-3">
-        {!user || (user.biz && cards.length === 0) ? (
+        {!user || user || (user.biz && cards.length === 0) ? (
           <CardsExample />
         ) : (
           cards.toReversed().map((card, index) => {
