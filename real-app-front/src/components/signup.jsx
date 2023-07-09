@@ -51,7 +51,6 @@ const SignUp = ({ redirect = "/sign-in" }) => {
           email: values.email,
           password: values.password,
         });
-        console.log(values);
         navigate(redirect);
       } catch ({ response }) {
         if (response && response.status === 400) {
