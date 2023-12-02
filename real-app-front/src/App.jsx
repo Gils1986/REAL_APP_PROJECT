@@ -76,7 +76,7 @@ function App() {
           />
         </Routes>
       </main>
-      <Footer />
+      <Footer img={"/favicon.ico"} />
     </div>
   );
 }

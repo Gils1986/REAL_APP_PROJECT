@@ -26,32 +26,41 @@ const Navbar = () => {
         </button> */}
 
         <div className="collapse navbar-collapse" id="navbarsExample03">
-          <ul className="navbar-nav me-auto mb-2 mb-sm-0">
-            <li className="nav-item">
-              <NavLink className="navbar-brand" to="/about" style={{ marginLeft: '20px' }} >
-                About
-              </NavLink>
-            </li>
+          <ul className="navbar-nav me-auto mb-sm-0">
+            <NavLink
+              className="navbar-brand"
+              to="/about"
+              style={{ marginLeft: "20px" }}
+            >
+              About
+            </NavLink>
+
             {user?.biz && (
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/my-cards">
-                  My Cards
-                </NavLink>
-              </li>
+              <NavLink
+                className="navbar-brand"
+                to="/my-cards"
+                style={{ marginLeft: "20px" }}
+              >
+                My Cards
+              </NavLink>
             )}
           </ul>
 
           <ul className="navbar-nav ms-auto mb-2 mb-sm-0">
             {user ? (
               <li className="nav-item">
-                <NavLink className="nav-link" to="sign-out">
+                <NavLink className="navbar-brand" to="sign-out">
                   Sign Out
                 </NavLink>
               </li>
             ) : (
               <>
                 <li className="nav-item">
-                  <NavLink className="navbar-brand" to="sign-in">
+                  <NavLink
+                    className="navbar-brand"
+                    to="sign-in"
+                    style={{ marginLeft: "20px" }}
+                  >
                     Sign In
                   </NavLink>
                 </li>

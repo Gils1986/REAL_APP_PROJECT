@@ -4,24 +4,25 @@ const About = () => {
   return (
     <>
       <PageHeader
-        smTitle={`About Us:`}
-        title={
-          <>
-            <i className="bi bi-briefcase-fill"></i> Biz
-            <span className="mx-1">2</span>Biz
-          </>
-        }
-        description="
-      We are a leading online platform for exceptional business cards, revolutionizing the way professionals connect in the digital era. With our innovative designs and cutting-edge technology, we empower businesses to make a lasting impression with their online presence. Discover our wide selection of customizable online business cards and elevate your professional image today."
+        img={"/favicon.ico"}
+        // smTitle={`About Us:`}
+        title={<>The Perfect Gift</>}
+        smTitle={<>About Us</>}
       />
       <div>
-        <p>Interface with Ease:</p>
-        For regular users, our website provides a user-friendly interface.
-        However, for business users, we offer a seamless experience. By
-        registering an account, they gain exclusive privileges to create, edit,
-        and delete cards effortlessly, enabling them to manage their digital
-        business presence efficiently. Join us today and unlock the full
-        potential of our platform!
+        'The Perfect Gift' is the leading company in the gift market and has
+        been around for over 20 years and provides a comprehensive response to
+        all types of events that require a gift. Is anyone celebrating a
+        birthday? A gift for the outstanding employee? Anyone just had a baby?
+        anniversary? Valentine's Day? A gift for the child's kindergarten
+        teacher? Or a holiday gift for the aunt who is hosting? We have
+        everything! The site has several categories divided by types of events
+        and in each category you will find a variety of gifts in a wide price
+        range. How to begin? First of all, >register on the site! (Without
+        registration you cannot enter the different categories and order a cool
+        gift), after you have registered you can start checking all the options
+        we offer, of course you can combine several gifts (!) and we will make
+        sure to pack them together in a cool package.
       </div>
     </>
   );
