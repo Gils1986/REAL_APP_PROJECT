@@ -6,18 +6,32 @@ import PageHeader from "./common/pageHeader";
 const CardsShow = () => {
   const { id } = useParams();
   const card = useCard(id);
+
+  if (!card) {
+    return <p>Loading...</p>;
+  }
+  
   return (
     <>
       <PageHeader
         title={
           <>
-            Real<i className="bi bi-clipboard2-data"></i>App
+            <p>Card ID: {card._id}</p>
           </>
         }
-        description="Some real text over here"
+        description={card.bizName}
       />
 
-      {card && <Card card={card} />}
+      {card && (
+        <>
+          <p>Card ID: {card._id}</p>
+          <p>Business Name: {card.bizName}</p>
+          <p>Business Description: {card.bizDescription}</p>
+          <p>Business Phone: {card.bizPhone}</p>
+          <p>Business Address: {card.bizAddress}</p>
+          <Card card={card} />
+        </>
+      )}
     </>
   );
 };

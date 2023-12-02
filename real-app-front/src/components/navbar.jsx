@@ -6,15 +6,14 @@ const Navbar = () => {
   const { user } = useAuth();
   return (
     <nav
-      className="navbar navbar-expand-sm navbar-light bg-dark-subtle shadow-md mb-2"
+      className="navbar navbar-expand-sm navbar-light bg-warning-subtle shadow-md mb-2"
       aria-label="Third navbar example"
     >
       <div className="container">
-        <Link className="navbar-brand" to="/">
-          <i className="bi bi-briefcase-fill"></i> Biz
-          <span className="mx-1">2</span>Biz
-        </Link>
-        <button
+        <NavLink className="navbar-brand" to="/">
+          Home
+        </NavLink>
+        {/* <button
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
@@ -24,12 +23,12 @@ const Navbar = () => {
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
-        </button>
+        </button> */}
 
         <div className="collapse navbar-collapse" id="navbarsExample03">
           <ul className="navbar-nav me-auto mb-2 mb-sm-0">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/about">
+              <NavLink className="navbar-brand" to="/about" style={{ marginLeft: '20px' }} >
                 About
               </NavLink>
             </li>
@@ -52,12 +51,12 @@ const Navbar = () => {
             ) : (
               <>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="sign-in">
+                  <NavLink className="navbar-brand" to="sign-in">
                     Sign In
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/sign-up">
+                  <NavLink className="navbar-brand" to="/sign-up">
                     Sign Up
                   </NavLink>
                 </li>

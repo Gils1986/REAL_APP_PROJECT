@@ -45,8 +45,8 @@ const CardsEdit = () => {
         if (bizImage) {
           body.bizImage = bizImage;
         }
-         cardService.updateCard(id, body);
-         toast("The card was edit");
+        cardService.updateCard(id, body);
+        toast("The card was edit");
         navigate("/my-cards");
       } catch ({ response }) {
         if (response && response.status === 400) {
@@ -58,7 +58,6 @@ const CardsEdit = () => {
 
   useEffect(() => {
     if (!card) return;
-   
 
     const { bizAddress, bizDescription, bizImage, bizName, bizPhone } = card;
     form.setValues({
@@ -72,7 +71,10 @@ const CardsEdit = () => {
 
   return (
     <>
-      <PageHeader title="Edit Card" description="Here you can update the current card details" />
+      <PageHeader
+        title="Edit Card"
+        description="Here you can update the current card details"
+      />
       <form onSubmit={form.handleSubmit} noValidate>
         <Input
           {...form.getFieldProps("bizName")}

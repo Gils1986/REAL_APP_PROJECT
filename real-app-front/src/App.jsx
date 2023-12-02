@@ -19,7 +19,7 @@ function App() {
   return (
     <div
       style={{
-        fontFamily: "Courier New",
+        fontFamily: "LuminaScript",
       }}
       className="app d-flex flex-column min-vh-100"
     >
