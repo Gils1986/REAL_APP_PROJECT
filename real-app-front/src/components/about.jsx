@@ -18,7 +18,7 @@ const About = () => {
         teacher? Or a holiday gift for the aunt who is hosting? We have
         everything! The site has several categories divided by types of events
         and in each category you will find a variety of gifts in a wide price
-        range. How to begin? First of all, >register on the site! (Without
+        range. How to begin? First of all, register on the site! (Without
         registration you cannot enter the different categories and order a cool
         gift), after you have registered you can start checking all the options
         we offer, of course you can combine several gifts (!) and we will make
